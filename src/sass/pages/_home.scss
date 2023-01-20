@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+$base-font: 'Montserrat', sans-serif;
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@mixin btn-shadow {}
+
+main.dark-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 80%;
+    margin: 40px 10%;
+    overflow: auto;
+    font-family: $base-font;
+
+}
+
+.input-container {
+
+    margin: 10px 0 60px 0;
+
+    .icon {
+        position: absolute;
+        margin: 15px 0 15px 20px;
+    }
+
+    .input-form {
+        box-sizing: border-box;
+        width: 600px;
+        height: 50px;
+        padding-left: 60px;
+        background: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        font-size: medium;
+    }
+}
+
+
+.articles {
+
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .card {
+        max-width: 345px;
+        margin: 45px;
+        margin-left: 0;
+
+        &:hover {
+            box-shadow: 2px 2px 5px #ccc;
+            border-radius: 8px;
+        }
+    }
+
+    .card.selected {
+        position: absolute;
+        max-width: 100%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 90%;
+        z-index: 7;
+        padding: 20px;
+        overflow: auto;
+    }
+}
+
+hr {
+    margin-top: 10px;
+    border: 1px solid #EAEAEA;
+}
+
+.back-button {
+
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+
+    .button {
+        outline: none;
+        border: 0;
+        background: transparent;
+        font-family: $base-font;
+        font-weight: 700;
+        align-self: center;
+
+        &:hover {
+            box-shadow: 2px 2px 5px #ccc;
+            border-radius: 8px;
+        }
+    }
+}
+
+.highlight {
+    background-color: yellow;
+}
